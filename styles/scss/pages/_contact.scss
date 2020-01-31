@@ -1,0 +1,24 @@
+aside {
+    .social-links {
+        display: flex;
+        li {
+            flex-basis: 19%;
+        }
+    }
+}
+
+.sidebar aside article.contact-info {
+    padding: 13% 8% 10%;
+}
+
+.contact {
+    form input {
+        padding-left: 3%;
+    }
+}
+
+.email-address {
+    h4 {
+        padding: 6.5% 0 4.5%;
+    }
+}

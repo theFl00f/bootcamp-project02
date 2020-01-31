@@ -1,0 +1,21 @@
+    @mixin fontSize($size-value: 20) {
+        font-size: $size-value * 1px;
+        font-size: ($size-value/10) * 0.525rem;
+        }
+
+    @mixin lineHeight($height-value: 32) {
+        line-height: $height-value * 1px;
+        line-height: ($height-value/10) * 0.525rem;
+        }
+
+    @mixin letterSpacing($spacing-value: inherit) {
+        letter-spacing: $spacing-value * 1px;
+        letter-spacing: ($spacing-value/10) * 0.525rem;
+    }
+    
+    @mixin sm { @media (max-width: $phone) {@content;} }
+    @mixin med { @media (max-width: $tablet) {@content;} }
+    @mixin lrg { @media (max-width: $desktop-sm) {@content;} }
+
+
+

@@ -1,0 +1,13 @@
+button {
+    padding: 8px 22px;
+    border: none;
+    background-color: $primary-accent;
+    
+    :hover {
+        color: white;
+    }
+}
+
+.article-links button {
+    padding: 7.5px 17px;
+}
