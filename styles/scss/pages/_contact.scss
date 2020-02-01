@@ -1,14 +1,25 @@
 aside {
     .social-links {
         display: flex;
+        @include med {
+            justify-content: center;
+        }
         li {
             flex-basis: 19%;
+            @include med {
+                text-align: center;
+                flex-basis: 12%;
+            }
         }
     }
 }
 
 .sidebar aside article.contact-info {
     padding: 13% 8% 10%;
+    @include med {
+        flex-basis: 100%;
+        padding: 8% 8% 6%;
+    }
 }
 
 .contact {
@@ -20,5 +31,8 @@ aside {
 .email-address {
     h4 {
         padding: 6.5% 0 4.5%;
+    }
+    @include med {
+        text-align: center;
     }
 }

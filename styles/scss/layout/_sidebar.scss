@@ -5,30 +5,50 @@
         .wrapper {
             display: flex;
             justify-content: space-between;
-        }
-        aside {
-            flex-basis: 30.5%;
-            min-width: 30%;
-            
-        }
-        section {
-            flex-basis: 66.5%;
+            @include med {
+                flex-direction: column;
+            }
         }
         aside,
         section {
             display: flex;
             flex-direction: column;
         }
+        aside {
+            flex-basis: 30.5%;
+            min-width: 30%;
+            @include med {
+                flex-direction: row;
+            }
+        }
+        section {
+            flex-basis: 66.5%;
+        }
     }
     aside {
         article {
             margin-bottom: 6.5%;
             padding: 11.5% 10.25% 10.5%;
+            @include med {
+                padding: 5%;
+            }
         }
     }
     article {
         background-color: white;
     }
     
+    article.about {
+        @include med {
+            flex-basis: 60%;
+        }
+    }
+    article.recent-posts {
+        @include med {
+            align-self: flex-start;
+            flex-basis: 40%;
+            padding: 10% 5% 7.5%;
+        }
+    }
 }
 

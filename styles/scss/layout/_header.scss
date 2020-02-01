@@ -1,11 +1,12 @@
 header {
     background-color: $primary-color;
-    max-height: 404px;
+    height: 404px;
     background-image: url(../assets/blog-image-1.jpg);
-    background-size: contain;
     background-repeat: no-repeat;
     background-position-y: 68px;
-    height: 100%;
+    background-position-x: 70%;
+    background-origin: bottom;
+    background-size: cover;
     position: relative;
     .wrapper {
         height: inherit;
@@ -19,6 +20,7 @@ header {
     }
     &.contact {
         background-image: url(../assets/contact-image-1.jpg);
+        background-position-x: 55%;
     }
 }
 
