@@ -4,6 +4,7 @@ button a,
 ::placeholder {
     font-family: $base-font;
     font-weight: bold;
+    @include transition;
     @include fontSize($fs-body);
     @include lineHeight($lh-body);
     color: $black;
@@ -118,7 +119,10 @@ p.date,
 header {
     nav {
         a {
-            :hover {
+            @include transition;
+            font-size: 1.5rem;
+            :hover,
+            &:hover {
                 color: white;
             }
         }
@@ -127,6 +131,9 @@ header {
 
 .sidebar {
     p {
+        a {
+            @include transition;
+        }
         a:hover {
             color: $primary-accent;
         }
@@ -137,6 +144,7 @@ header {
     color: $primary-color;
     @include fontSize(32);
     font-weight: normal;
+    @include transition;
     :hover, 
     :focus-within {
         color: $secondary-color;
