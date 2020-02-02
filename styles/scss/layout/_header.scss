@@ -8,6 +8,11 @@ header {
     background-origin: bottom;
     background-size: cover;
     position: relative;
+    @include sm {
+        height: unset;
+        background-image: unset;
+        background-color: $primary-accent;
+    }
     .wrapper {
         height: inherit;
     }
@@ -16,11 +21,18 @@ header {
         h1 {
             position: absolute;
             bottom: -8.75%;
+            @include sm {
+                position: relative;
+                text-align: center;
+            }
         }
     }
     &.contact {
         background-image: url(../assets/contact-image-1.jpg);
         background-position-x: 55%;
+        @include sm {
+            background-image: unset;
+        }
     }
 }
 

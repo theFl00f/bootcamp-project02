@@ -10,6 +10,9 @@ aside {
                 text-align: center;
                 flex-basis: 12%;
             }
+            @include sm {
+                flex-basis: 17.5%;
+            }
         }
     }
 }

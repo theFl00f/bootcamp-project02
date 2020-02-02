@@ -12,8 +12,9 @@
         letter-spacing: $spacing-value * 1px;
         letter-spacing: ($spacing-value/10) * 0.525rem;
     }
-    
-    @mixin sm { @media (max-width: $phone) {@content;} }
+
+    @mixin xs { @media (max-width: $mobilesm) {@content;} }
+    @mixin sm { @media (max-width: $mobile) {@content;} }
     @mixin med { @media (max-width: $tablet) {@content;} }
     @mixin lrg { @media (max-width: $desktop-sm) {@content;} }
 

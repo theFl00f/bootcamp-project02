@@ -7,6 +7,9 @@ button a,
     @include fontSize($fs-body);
     @include lineHeight($lh-body);
     color: $black;
+    @include xs {
+        font-size: 1.1rem;
+    }
 }
 
 h1,
@@ -32,12 +35,24 @@ header.home {
         @media (max-width:1100px) {
             font-size: 6.6rem;
         }
+        @include med {
+            font-size: 6.0rem;
+        }
+        @include sm {
+            font-size: 4.8rem;
+        }
+        @media (max-width:350px) {
+            font-size: 4.2rem;
+        }
     }
 }
 
 h2 {
     @include fontSize($fs-h2);
     @include letterSpacing($no-space);
+    @include xs {
+        line-height: 2.2rem;
+    }
 }
 
 h3 {
@@ -54,6 +69,9 @@ header h3 {
 h4 {
     @include fontSize($fs-h4);
     @include letterSpacing($no-space);
+    @include sm {
+        font-size: 1.6rem;
+    }
 }
 
 h5 {
@@ -61,6 +79,9 @@ h5 {
     @include lineHeight($lh-h5);
     @include letterSpacing($no-space);
     text-align: right;
+    @include sm {
+        font-size: 1.2rem;
+    }
 }
 
 button a,
@@ -116,12 +137,18 @@ header {
     color: $primary-color;
     @include fontSize(32);
     font-weight: normal;
-    ::hover, 
-    ::focus-within {
-        color: $primary-accent;
+    :hover, 
+    :focus-within {
+        color: $secondary-color;
     }
 }
 
 .email-address h4 {
     text-transform: none;
+}
+
+aside h4 {
+    @include sm {
+        text-align: center;
+    }
 }

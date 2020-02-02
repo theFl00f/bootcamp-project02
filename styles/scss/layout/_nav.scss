@@ -2,6 +2,9 @@ header {
     nav {
         height: 68px;
         background-color: $primary-color;
+        @include sm {
+            height: unset;
+        }
         ul {
             display: flex;
             justify-content: space-evenly;
@@ -13,6 +16,12 @@ header {
             }
             @include med {
                 margin: 0 5%;
+            }
+            @include sm {
+                flex-direction: column;
+                :nth-child(3) {
+                    order: -1;
+                }
             }
         }
         a {
