@@ -2,7 +2,6 @@ header {
     nav {
         height: 68px;
         background-color: $primary-color;
-        z-index: 2;
         @include sm {
             height: unset;
         }
@@ -14,25 +13,28 @@ header {
         }
         
         .main-menu > li {
-            display: none;
-            padding: 2%;
-            height: 100%;
-            &:hover,
-            &:focus-within {
-                padding-bottom: 0;
-            }
-            @include sm {
-                display: block;  
-                width: 100%;
-                text-align: center;
-            }
-            @include sm {
-                &:hover ul.nav,
-                &:focus-within ul.nav {
-                    display: flex;
-                    height: 100%;
-                    transform: scaleY(1);
-                    opacity: 1;
+            width: 100%; 
+            > a {
+                display: none;
+                padding: 2%;
+                height: 100%;
+                &:hover,
+                &:focus-within {
+                    padding-bottom: 0;
+                }
+                @include sm {
+                    display: block;  
+                    width: 100%;
+                    text-align: center;
+                }
+                @include sm {
+                    &:hover ul.nav,
+                    &:focus-within ul.nav {
+                        display: flex;
+                        height: 100%;
+                        transform: scaleY(1);
+                        opacity: 1;
+                    }
                 }
             }
         }
