@@ -576,7 +576,6 @@ header nav a :hover, header nav a:hover {
 header nav {
   height: 68px;
   background-color: #f6a823;
-  z-index: 2;
 }
 
 @media (max-width: 480px) {
@@ -596,17 +595,21 @@ header nav .main-menu {
 }
 
 header nav .main-menu > li {
+  width: 100%;
+}
+
+header nav .main-menu > li > a {
   display: none;
   padding: 2%;
   height: 100%;
 }
 
-header nav .main-menu > li:hover, header nav .main-menu > li:focus-within {
+header nav .main-menu > li > a:hover, header nav .main-menu > li > a:focus-within {
   padding-bottom: 0;
 }
 
 @media (max-width: 480px) {
-  header nav .main-menu > li {
+  header nav .main-menu > li > a {
     display: block;
     width: 100%;
     text-align: center;
@@ -614,8 +617,8 @@ header nav .main-menu > li:hover, header nav .main-menu > li:focus-within {
 }
 
 @media (max-width: 480px) {
-  header nav .main-menu > li:hover ul.nav,
-  header nav .main-menu > li:focus-within ul.nav {
+  header nav .main-menu > li > a:hover ul.nav,
+  header nav .main-menu > li > a:focus-within ul.nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
