@@ -595,30 +595,20 @@ header nav .main-menu {
 }
 
 header nav .main-menu > li {
+  padding: 2%;
+  height: 100%;
   width: 100%;
 }
 
-header nav .main-menu > li > a {
-  display: none;
-  padding: 2%;
-  height: 100%;
-}
-
-header nav .main-menu > li > a:hover, header nav .main-menu > li > a:focus-within {
-  padding-bottom: 0;
-}
-
 @media (max-width: 480px) {
-  header nav .main-menu > li > a {
-    display: block;
-    width: 100%;
+  header nav .main-menu > li {
     text-align: center;
   }
-}
-
-@media (max-width: 480px) {
-  header nav .main-menu > li > a:hover ul.nav,
-  header nav .main-menu > li > a:focus-within ul.nav {
+  header nav .main-menu > li:hover, header nav .main-menu > li:focus-within {
+    padding-bottom: 0;
+  }
+  header nav .main-menu > li:hover ul.nav,
+  header nav .main-menu > li:focus-within ul.nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -626,6 +616,16 @@ header nav .main-menu > li > a:hover, header nav .main-menu > li > a:focus-withi
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
     opacity: 1;
+  }
+}
+
+header nav .main-menu > li > a {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  header nav .main-menu > li > a {
+    display: block;
   }
 }
 
@@ -657,12 +657,12 @@ header nav ul.nav {
 
 @media (max-width: 480px) {
   header nav ul.nav {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
     opacity: 0;
     height: 0;
     -webkit-transition: scale 1s ease;

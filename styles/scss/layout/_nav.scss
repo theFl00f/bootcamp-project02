@@ -11,30 +11,31 @@ header {
             display: flex;
             justify-content: center;
         }
-        
+
         .main-menu > li {
-            width: 100%; 
-            > a {
-                display: none;
-                padding: 2%;
-                height: 100%;
+
+            padding: 2%;
+            height: 100%;
+            width: 100%;
+            
+            @include sm {
+                text-align: center;
                 &:hover,
                 &:focus-within {
                     padding-bottom: 0;
                 }
-                @include sm {
-                    display: block;  
-                    width: 100%;
-                    text-align: center;
+                &:hover ul.nav,
+                &:focus-within ul.nav {
+                    display: flex;
+                    height: 100%;
+                    transform: scaleY(1);
+                    opacity: 1;
                 }
+            }
+            > a {
+                display: none;
                 @include sm {
-                    &:hover ul.nav,
-                    &:focus-within ul.nav {
-                        display: flex;
-                        height: 100%;
-                        transform: scaleY(1);
-                        opacity: 1;
-                    }
+                    display: block;
                 }
             }
         }
@@ -52,11 +53,11 @@ header {
                 margin: 0 5%;
             }
             @include sm {
+                transform: scaleY(0);
                 flex-direction: column;
                 :nth-child(3) {
                     order: -1;
                 }
-                transform: scaleY(0);
                 opacity: 0;
                 height: 0;
                 transition: scale 1s ease;
